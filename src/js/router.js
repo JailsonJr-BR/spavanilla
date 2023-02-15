@@ -55,18 +55,51 @@ export class handleRoute {
     })
 
     if (pathname === "/") {
-      const $simpleCarousel = document.querySelector(".glider");
+      const heroSlider = document.querySelector(".home-slider");
+      new Glider(heroSlider, {
+        slidesToShow: 1,
+        draggable: true,
+        rewind: true,
+        arrows: {
+          prev: ".hero-prev",
+          next: ".hero-next",
+        },
+        duration: 0.5,
+      })
 
-    new Glider($simpleCarousel, {
-      slidesToShow: 1,
-      draggable: false,
-      infinity: true,
-      rewind: true,
-      arrows: {
-        prev: ".glider-prev",
-        next: ".glider-next",
-      },
-    });
+      const bookSlider = document.querySelector(".book-slider");
+      new Glider(bookSlider, {
+        draggable: true,
+        rewind: true,
+        resizeLock: false,
+        arrows: {
+          prev: ".book-prev",
+          next: ".book-next",
+        },
+        responsive: [
+          {
+            breakpoint: 900,
+            settings: {
+              slidesToShow: 5,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 575,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 360,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      })
     }
 
     return app

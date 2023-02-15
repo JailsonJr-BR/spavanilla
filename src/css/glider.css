@@ -53,13 +53,12 @@
   padding: 0;
   width: 4.5rem;
   z-index: 2;
-  font-size: 5rem;
+  font-size: 7rem;
   text-decoration: none;
   left: 30px;
   border: 0;
-  background-color: rgba(252, 252, 252, 0.548);
   border-radius: 12px;
-  top: 30%;
+  top: 50%;
   cursor: pointer;
   color: #9747FF;
   opacity: 1;

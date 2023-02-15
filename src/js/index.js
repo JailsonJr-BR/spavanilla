@@ -1,6 +1,7 @@
 //import { renderNavLinks } from "./routes/render-nav-links.js";
-import { handleRoute } from "./router.js";
-import { activeNav } from "./utils.js";
+import { handleRoute } from "./router.js"
+import { activeNav } from "./utils.js"
+import BookCard from "./components/BookCard.js"
 
 const router = new handleRoute()
 router.add("/", "../src/pages/home.html")
@@ -13,5 +14,6 @@ await router.dom()
 
 activeNav()
 
+window.customElements.define('book-card', BookCard)
 window.onpopstate = () => router.handle()
 window.route = () => router.route()

@@ -1,0 +1,35 @@
+.book-card {
+    max-width: 19rem;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 15%);
+    border-radius: 1.2rem;
+  }
+
+.book img {
+  width: 80%;
+  margin: 0 auto
+}
+
+.book-card h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin: 1rem 0 2rem 0;
+}
+
+.book-card button {
+  width: 100%;
+  border: none;
+  background-color: var(--PRIMARY-COLOR);
+  color: #ffffff;
+  font-size: 1.8rem;
+  padding: .5rem;
+  border-radius: .3rem;
+  cursor: pointer;
+}
+
+.book-card button:hover {
+  background-color: var(--BACKGROUND-COLOR);
+}
