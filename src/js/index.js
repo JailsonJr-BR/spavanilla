@@ -9,6 +9,7 @@ router.add(404, "../src/pages/404.html")
 
 router.handle()
 router.renderNavLinks()
+await router.dom()
 
 activeNav()
 

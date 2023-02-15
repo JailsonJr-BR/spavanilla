@@ -14,6 +14,7 @@ export class handleRoute {
     window.history.pushState({}, "", event.target.href)
 
     this.handle()
+    this.dom()
   }
 
   handle() {
@@ -43,5 +44,31 @@ export class handleRoute {
       link.onclick = () => this.route()
       navLinks.appendChild(link);
     }
+  }
+
+  async dom() {
+    const { pathname } = window.location
+    const route = this.routes [pathname] || this.routes [404]
+
+    const app = await fetch(route).then(data => data.text()).then(html => {
+      return document.querySelector('#appRender').innerHTML
+    })
+
+    if (pathname === "/") {
+      const $simpleCarousel = document.querySelector(".glider");
+
+    new Glider($simpleCarousel, {
+      slidesToShow: 1,
+      draggable: false,
+      infinity: true,
+      rewind: true,
+      arrows: {
+        prev: ".glider-prev",
+        next: ".glider-next",
+      },
+    });
+    }
+
+    return app
   }
 }
