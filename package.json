@@ -1,0 +1,16 @@
+{
+  "name": "spa-vanilla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "git-commit-msg-linter": "^4.7.3",
+    "lite-server": "^2.6.1"
+  }
+}
