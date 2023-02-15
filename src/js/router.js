@@ -31,6 +31,8 @@ export class handleRoute {
     const routes = {
       "/": "Home",
       "/about": "About us",
+      "/contact": "Contact",
+      "/admin": "Dashboard",
     }
 
     for (const route in routes) {
