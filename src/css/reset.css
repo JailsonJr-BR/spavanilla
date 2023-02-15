@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  font-size: 62.5%;
-}
-
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -38,8 +34,8 @@ body {
 }
 
 /* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+a {
+  text-decoration: none;
 }
 
 /* Make images easier to work with */

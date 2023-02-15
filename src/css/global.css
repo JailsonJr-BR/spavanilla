@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+    --BACKGROUND-PRIMARY-COLOR: #EDF2F4;
+    --PRIMARY-COLOR: #134372;
+    --SECONDARY-COLOR: #E8D7FF;
+    --WHITE-COLOR: #ffffff;
+    --BLACK-COLOR: #000000;
+}
+
+body {
+  font-family: Inter, sans-serif;
+}
+a {
+  font-size: 2rem;
+  color: var(--BLACK-COLOR);
+}
+
+header {
+  padding: 2rem 0;
+  background-color: var(--SECONDARY-COLOR);
+}
+
+.container {
+  padding: 0 7%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  margin-left: 4rem;
+}
