@@ -4,7 +4,7 @@
   font-size: 62.5%;
   scroll-behavior: smooth;
     --BACKGROUND-PRIMARY-COLOR: #EDF2F4;
-    --PRIMARY-COLOR: #134372;
+    --PRIMARY-COLOR: #9747FF;
     --SECONDARY-COLOR: #E8D7FF;
     --WHITE-COLOR: #ffffff;
     --BLACK-COLOR: #000000;
@@ -34,4 +34,15 @@ nav {
 
 nav a {
   margin-left: 4rem;
+  position: relative;
+}
+
+.nav-item.active::after {
+  content: " ";
+  width: 100%;
+  height: .4rem;
+  position: absolute;
+  left: 0;
+  top: 2.6rem;
+  background-color: var(--PRIMARY-COLOR);
 }

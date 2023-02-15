@@ -38,7 +38,8 @@ export class handleRoute {
     for (const route in routes) {
       const link = document.createElement("a");
       link.href = route;
-      link.innerText = routes[route];
+      link.innerText = routes[route]
+      link.classList = 'nav-item'
       link.onclick = () => this.route()
       navLinks.appendChild(link);
     }
