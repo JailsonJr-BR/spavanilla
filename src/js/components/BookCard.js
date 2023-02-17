@@ -10,7 +10,7 @@ template.innerHTML = `
     <h3></h3>
   </div>
   <div>
-    <button>View Details</button>
+    <button class="booklink"><a>View Details</a></button>
   </div>
   </div>
 `
@@ -23,7 +23,7 @@ class BookCard extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["name", "book"]
+    return ["name", "book", "link"]
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -31,6 +31,8 @@ class BookCard extends HTMLElement {
       this.getAttribute("name")
     this.shadowRoot.querySelector(".book img").src =
       this.getAttribute("book")
+    this.shadowRoot.querySelector(".booklink a").href =
+      this.getAttribute("link")
   }
 }
 
