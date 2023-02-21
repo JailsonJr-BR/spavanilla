@@ -8,7 +8,8 @@
 
 .book img {
   width: 80%;
-  margin: 0 auto
+  margin: 0 auto;
+  min-height: 19.2rem;
 }
 
 .book-card h3 {
