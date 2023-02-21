@@ -117,7 +117,7 @@ export class handleRoute {
     if (pathname === "/admin") {
       await this.dashboard.renderTable()
       await this.dashboard.renderViewDashboard()
-      this.book.createBook()
+      await this.book.createBook()
       const addBookButton = document.querySelector('.add-book-model')
       const bookForm = document.querySelector('.add-book')
       const backAddBook = document.querySelector('.back-add-book')
