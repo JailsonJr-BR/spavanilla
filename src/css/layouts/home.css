@@ -1,11 +1,10 @@
 .home-style {
   background-color: var(--SECONDARY-COLOR);
   padding: 3rem 0 6rem 0;
-  position: relative;
 }
 
-.home-style > div {
-  margin: 0 7%;
+.home-style img {
+  width: 100%;
   border-radius: 1.2rem;
 }
 

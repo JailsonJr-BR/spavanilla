@@ -67,17 +67,6 @@ export class handleRoute {
     if (pathname === "/") {
       await this.book.renderBooksByCategories()
 
-      const heroSlider = document.querySelector(".home-slider")
-      new Glider(heroSlider, {
-        slidesToShow: 1,
-        draggable: true,
-        rewind: true,
-        arrows: {
-          prev: ".hero-prev",
-          next: ".hero-next",
-        },
-      })
-
       const bookSliders = document.querySelectorAll(".book-slider")
 
       bookSliders.forEach (async bookSlider => {
