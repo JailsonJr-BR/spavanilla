@@ -24,7 +24,6 @@ export class HandleBook {
       reader.readAsDataURL(file);
     });
 
-    // Faz o cadastro de um livro
     form.addEventListener("submit", (event) => {
       event.preventDefault();
 
@@ -34,7 +33,8 @@ export class HandleBook {
         body: formData
       };
 
-      fetch("http://localhost:3001/books", requestBody)
+      // Cadastra novo livro
+      fetch("https://vbcvvbvb-production.up.railway.app/books", requestBody)
       .then((response) => response.json())
       .then(async (data) => {
         alert("Livro criado com sucesso:", data);
@@ -51,7 +51,7 @@ export class HandleBook {
   }
 
   async renderBooksByCategories () {
-    await fetch('http://localhost:3001/category', {
+    await fetch('https://vbcvvbvb-production.up.railway.app/category', {
       method: 'GET',
       mode: 'cors'
     })
@@ -81,7 +81,7 @@ export class HandleBook {
         divRenderBook.classList.add('book-slider')
 
         // Listagem dos livros por categoria
-        const categoryWithBook = await fetch(`http://localhost:3001/category/${category._id}`, {
+        const categoryWithBook = await fetch(`https://vbcvvbvb-production.up.railway.app/category/${category._id}`, {
           method: 'GET',
           mode: 'cors'
         })
@@ -96,7 +96,7 @@ export class HandleBook {
           for (const book of books) {
             const link = document.createElement("book-card");
             link.setAttribute("name", book.name);
-            const imagePath = "http://localhost:3001/" + book.imagePath;
+            const imagePath = "https://vbcvvbvb-production.up.railway.app/" + book.imagePath;
             link.setAttribute("book", imagePath);
 
             // Abre o modal do livro atual
@@ -127,7 +127,7 @@ export class HandleBook {
     // Cria modal do book na DOM
     modal.innerHTML = `
     <div class="modal-book">
-        <img src="http://localhost:3001/${book.imagePath}" />
+        <img src="https://vbcvvbvb-production.up.railway.app/${book.imagePath}" />
         <div>
         <h2>${book.name}</h2>
         <p>Autor:  <span>${book.author}</span></p>

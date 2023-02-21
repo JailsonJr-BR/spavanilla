@@ -1,7 +1,7 @@
 export class HandleDashboard {
   async renderViewDashboard () {
     // Renderiza a quantidade total de categorias cadastradas
-    await fetch('http://localhost:3001/category', {
+    await fetch('https://vbcvvbvb-production.up.railway.app/category', {
       method: 'GET',
       mode: 'cors'
     })
@@ -12,7 +12,7 @@ export class HandleDashboard {
     })
 
     // Renderiza a quantidade total de livros cadastrados
-    await fetch('http://localhost:3001/books', {
+    await fetch('https://vbcvvbvb-production.up.railway.app/books', {
       method: 'GET',
       mode: 'cors'
     })
@@ -23,7 +23,7 @@ export class HandleDashboard {
     })
 
     // Renderiza a quantidade total de contatos enviados
-    await fetch('http://localhost:3001/contact', {
+    await fetch('https://vbcvvbvb-production.up.railway.app/contact', {
       method: 'GET',
       mode: 'cors'
     })
@@ -36,14 +36,14 @@ export class HandleDashboard {
 
   async renderTable() {
     const table = document.querySelector('#books-table');
-    await fetch('http://localhost:3001/books')
+    await fetch('https://vbcvvbvb-production.up.railway.app/books')
       .then(response => response.json())
       .then(async data => {
         table.querySelector('tbody').innerHTML = '';
 
         // Faz a buscas das categorias
         const categoriesMap = {};
-        await fetch('http://localhost:3001/category')
+        await fetch('https://vbcvvbvb-production.up.railway.app/category')
         .then(response => response.json())
         .then(categories => {
           categories.forEach(category => {
@@ -70,7 +70,7 @@ export class HandleDashboard {
             try {
               const removeBook = confirm(`Tem certeza que deseja excluir o livro: ${book.name}?`)
               if(removeBook) {
-                await fetch(`http://localhost:3001/books/${book._id}`, { method: 'DELETE' });
+                await fetch(`https://vbcvvbvb-production.up.railway.app/books/${book._id}`, { method: 'DELETE' });
                 row.remove();
                 await this.renderViewDashboard()
 
@@ -94,7 +94,7 @@ export class HandleDashboard {
 
   async renderSelect() {
     try {
-      const response = await fetch('http://localhost:3001/category', {
+      const response = await fetch('https://vbcvvbvb-production.up.railway.app/category', {
         method: 'GET',
         mode: 'cors'
       });
@@ -134,7 +134,7 @@ export class HandleDashboard {
         body: JSON.stringify({ name, email, subject, message }),
       };
 
-      fetch("http://localhost:3001/contact", requestBody)
+      fetch("https://vbcvvbvb-production.up.railway.app/contact", requestBody)
       .then((response) => response.json())
       .then(data => {
         alert("Mensagem enviada com sucesso:", data);
@@ -152,7 +152,7 @@ export class HandleDashboard {
 
   async renderContact() {
     const table = document.querySelector('#contact-table');
-    await fetch('http://localhost:3001/contact')
+    await fetch('https://vbcvvbvb-production.up.railway.app/contact')
       .then(response => response.json())
       .then(async data => {
 
@@ -196,7 +196,7 @@ export class HandleDashboard {
       })
     };
 
-    fetch("http://localhost:3001/category", requestBody)
+    fetch("https://vbcvvbvb-production.up.railway.app/category", requestBody)
     .then((response) => response.json())
     .then(async (data) => {
       alert("Categoria criada com sucesso:", data);
