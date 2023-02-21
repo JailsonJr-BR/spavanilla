@@ -2,4 +2,10 @@
 @import url(global.css);
 @import url(glider.css);
 @import url(layouts/home.css);
+@import url(layouts/dashboard.css);
+@import url(layouts/about.css);
+@import url(layouts/contact.css);
+@import url(layouts/category-view.css);
+@import url(layouts/404.css);
 @import url(components/card-book.css);
+@import url(components/modal-book.css);

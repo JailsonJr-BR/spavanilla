@@ -29,11 +29,11 @@
 }
 
 .book-style .glider-prev {
-  left: -1.5rem;
+  left: -6rem;
 }
 
 .book-style > .glider-next  {
-  right: -1.5rem;
+  right: -6rem;
 }
 
 .book-style h2 {

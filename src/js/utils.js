@@ -1,3 +1,4 @@
+// Funcao que adiciona comportamento ativo ao menu de navegacao
 export function activeNav () {
   const navList = document.querySelector("#navLinksRender");
   const navItems = navList.getElementsByClassName("nav-item");

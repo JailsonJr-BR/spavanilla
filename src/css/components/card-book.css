@@ -1,6 +1,5 @@
 .book-card {
-    max-width: 19rem;
-    width: 100%;
+    width: 19rem;
     padding: 1rem;
     box-shadow: 0 3px 12px rgb(0 0 0 / 15%);
     border-radius: 1.2rem;
@@ -27,9 +26,6 @@
   padding: .5rem;
   border-radius: .3rem;
   cursor: pointer;
-}
-
-.book-card a {
   color: #ffffff;
 }
 

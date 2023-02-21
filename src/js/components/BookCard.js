@@ -1,5 +1,6 @@
 const template = document.createElement("template")
 
+// Template do componente
 template.innerHTML = `
 <link rel="stylesheet" href="src/css/styles.css"/>
   <div class="book-card">
@@ -10,7 +11,7 @@ template.innerHTML = `
     <h3></h3>
   </div>
   <div>
-    <button class="booklink"><a>View Details</a></button>
+    <button>View Details</button>
   </div>
   </div>
 `
@@ -23,7 +24,7 @@ class BookCard extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["name", "book", "link"]
+    return ["name", "book"]
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -31,8 +32,6 @@ class BookCard extends HTMLElement {
       this.getAttribute("name")
     this.shadowRoot.querySelector(".book img").src =
       this.getAttribute("book")
-    this.shadowRoot.querySelector(".booklink a").href =
-      this.getAttribute("link")
   }
 }
 

@@ -1,0 +1,13 @@
+.error404-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: var(--SECONDARY-COLOR);
+
+}
+
+.error404-style h1{
+  font-size: 7rem;
+  font-weight: 300;
+}

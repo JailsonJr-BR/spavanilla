@@ -1,0 +1,42 @@
+.table-contact {
+  margin-bottom: 2rem;
+}
+
+.table-contact table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.table-contact td {
+  font-size: 1.6rem;
+  max-width: 40rem;
+  padding: 3rem 1.6rem;
+}
+
+.table-contact th, td {
+  text-align: left;
+}
+
+.table-contact button {
+  border: none;
+  background-color: var(--PRIMARY-COLOR);
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+}
+
+.table-contact button:hover {
+  background-color: var(--BACKGROUND-COLOR);
+}
+
+.table-contact th {
+  background-color: var(--PRIMARY-COLOR);
+  color: #ffffff;
+  font-size: 1.6rem;
+  padding: 1.6rem;
+}
+
+.table-contact tr:nth-child(even) {
+  background-color: var(--SECONDARY-COLOR);
+}

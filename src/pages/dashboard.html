@@ -1,4 +1,82 @@
-<h1>
-  dash
 
-</h1>
+<div class="add-book container">
+  <div class="back-add-book"><button>Voltar</button></div>
+  <form id="book-form">
+    <div class="custom-file-upload">
+      <img src="../../src/img/book1.png" id="selected-image">
+      <label for="image-path"><span>Adicionar imagem</span></label>
+      <input type="file" id="image-path" name="image" value="asas">
+      </input>
+    </div>
+    <div class="form-book">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="name">Autor:</label>
+      <input type="text" id="author" name="author" required>
+
+      <label for="description">Descrição:</label>
+      <textarea id="description" name="description"></textarea>
+
+      <label for="category_id">Categoria</label>
+      <div><select name="category_id" id="category_id"></select></div>
+
+      <button type="submit">Criar Livro</button>
+    </div>
+  </form>
+</div>
+
+<section class="dashboard container">
+  <h2>Painel de controle</h2>
+  <div class="dashboard-info-style">
+    <div class="dashboard-info-item">
+      <div>
+        <span class="books-view">0</span>
+        <p>Livros Cadastrados</p>
+      </div>
+      <div class="add-book-model">
+        <button>Cadastrar livro</button>
+      </div>
+    </div>
+
+    <div class="dashboard-info-item">
+      <div>
+        <span class="categories-view">0</span>
+        <p>Categoria Cadastradas</p>
+      </div>
+      <div class="category-book-model">
+        <button>Cadastrar categoria</button>
+      </div>
+    </div>
+
+    <div class="dashboard-info-item">
+      <div>
+        <span class="contact-view">0</span>
+        <p>Comentarios Enviados</p>
+      </div>
+      <div class="contact-book-model">
+        <button><a href="/contactview">Ver comentarios</a></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+ <div class="dashboard">
+  <h2>Tabela de Livros</h2>
+ </div>
+<div class="table-book">
+  <table id="books-table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Autor</th>
+        <th>Categoria</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+</div>
