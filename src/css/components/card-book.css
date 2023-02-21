@@ -3,6 +3,7 @@
     padding: 1rem;
     box-shadow: 0 3px 12px rgb(0 0 0 / 15%);
     border-radius: 1.2rem;
+    min-height: 33rem;
   }
 
 .book img {

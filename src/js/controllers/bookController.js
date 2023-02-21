@@ -1,3 +1,5 @@
+const api = 'https://vbcvvbvb-production.up.railway.app'
+
 import { HandleDashboard } from "./dashboardController.js";
 
 export class HandleBook {
@@ -34,7 +36,7 @@ export class HandleBook {
       };
 
       // Cadastra novo livro
-      fetch("https://vbcvvbvb-production.up.railway.app/books", requestBody)
+      fetch(`${api}/books`, requestBody)
       .then((response) => response.json())
       .then(async (data) => {
         alert("Livro criado com sucesso:", data);
@@ -51,7 +53,7 @@ export class HandleBook {
   }
 
   async renderBooksByCategories () {
-    await fetch('https://vbcvvbvb-production.up.railway.app/category', {
+    await fetch(`${api}/category`, {
       method: 'GET',
       mode: 'cors'
     })
@@ -81,7 +83,7 @@ export class HandleBook {
         divRenderBook.classList.add('book-slider')
 
         // Listagem dos livros por categoria
-        const categoryWithBook = await fetch(`https://vbcvvbvb-production.up.railway.app/category/${category._id}`, {
+        const categoryWithBook = await fetch(`${api}/category/${category._id}`, {
           method: 'GET',
           mode: 'cors'
         })
@@ -96,7 +98,7 @@ export class HandleBook {
           for (const book of books) {
             const link = document.createElement("book-card");
             link.setAttribute("name", book.name);
-            const imagePath = "https://vbcvvbvb-production.up.railway.app/" + book.imagePath;
+            const imagePath = `${api}/` + book.imagePath;
             link.setAttribute("book", imagePath);
 
             // Abre o modal do livro atual
@@ -127,7 +129,7 @@ export class HandleBook {
     // Cria modal do book na DOM
     modal.innerHTML = `
     <div class="modal-book">
-        <img src="https://vbcvvbvb-production.up.railway.app/${book.imagePath}" />
+        <img src="${api}/${book.imagePath}" />
         <div>
         <h2>${book.name}</h2>
         <p>Autor:  <span>${book.author}</span></p>
