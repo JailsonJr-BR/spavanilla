@@ -1,5 +1,5 @@
 
-![Logo](https://devbook-two.vercel.app/src/img/logo.svg)
+![Logo](https://i.imgur.com/Z5rUce2.png)
 # Vanilla SPA Application
 
 O DevBook é um projeto de estudo que eu criei com o objetivo de aprender sobre Single Page Applications (SPAs) utilizando JavaScript vanilla e técnicas avançadas de manipulação do DOM. Eu também desenvolvi um backend para complementar a aplicação, utilizando Node.js, Express e MongoDB.
